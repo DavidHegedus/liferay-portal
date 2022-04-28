@@ -1,0 +1,35 @@
+definition {
+
+	@description = "LRSUHU_2575_TC1 teszt eset futtatása"
+	test LRSUHU2575TC1 {
+
+		task ("Given: Ticket finder megnyitása és bejelentkezés") {
+			Default.Open(locator1 = "https://ticketfinder.liferay.com/");
+
+			// Kézi login
+
+			Default.Pause(locator1 = "30000");
+		}
+
+		task ("When: Kiválasztjuk csak a WCM komponenst és megnézzük hogy megjelenik-e az animáció a Search gomb mellett") {
+
+			Default.Click(locator1 = "TF#FILTER_DROPDOWN");
+
+			Default.Click(locator1 = "TF#ALL_CHECKBOX");
+
+			Default.Click(locator1 = "TF#WCM_CHECKBOX");
+
+			Default.Click(locator1 = "TF#SEARCH_BUTTON");
+		}
+
+		task ("Then: Megfigyelni hogy az animáció megjelenik-e a Search gomb mellett és eltűnik-e") {
+
+        	Default.AssertElementPresent(locator1 = "TF#LOADING");
+
+        	Default.Pause(locator1 = "5000");
+
+        	Default.AssertElementNotPresent(locator1 = "TF#LOADING");
+		}
+	}
+
+}

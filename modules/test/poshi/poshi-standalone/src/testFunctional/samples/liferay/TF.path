@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>TF</title>
+</head>
+
+<body>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TF</td></tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>SEARCH_BUTTON</td>
+	<td>//button/span[contains(text(),"Search")]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>LOADING</td>
+	<td>//button/span[contains(@class,"p-button-loading-icon")]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FILTER_DROPDOWN</td>
+	<td>//div[contains(@class,"p-multiselect-trigger")]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ALL_CHECKBOX</td>
+	<td>//div[contains(@class,"p-multiselect-header")]/div[contains(@class,"p-checkbox")]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>WCM_CHECKBOX</td>
+	<td>//div[contains(@class,"p-multiselect-items-wrapper")]/ul/li/span[contains(text(),"WCM")]</td>
+	<td></td>
+</tr>
+
+</tbody>
+</table>
+</body>
+</html>
